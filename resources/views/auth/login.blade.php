@@ -5,6 +5,26 @@
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
+        <div class="text-center">
+            <a href="{{ route('github.login') }}">
+                <img
+                    src="https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg"
+                    alt="GitHub icon"
+                    width="50px"
+                    class="mx-auto scale-100 hover:scale-125 ease-in duration-200"
+                />
+            </a>
+
+            <a href="{{ route('github.login') }}">
+                <img
+                    src="https://icon-library.com/images/facebook-icon-white/github-icon-white-6.jpg"
+                    alt="GitHub icon"
+                    width="50px"
+                    class="mx-auto scale-100 hover:scale-125 ease-in duration-200"
+                />
+            </a>
+        </div>
+
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />

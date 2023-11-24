@@ -37,6 +37,25 @@ const submit = () => {
             {{ status }}
         </div>
 
+        <div class="text-center p-4 mb-6">
+            <a href="https://laravel-socialite.test/github-auth/redirect">
+                <img
+                    src="https://icon-library.com/images/github-icon-vector/github-icon-vector-27.jpg"
+                    alt="GitHub icon"
+                    width="50"
+                    class="mx-auto hover:scale-125 ease-in duration-200"
+                />
+            </a>
+            <a href="https://laravel-socialite.test/facebook-auth/redirect">
+                <img
+                    src="https://icon-library.com/images/social-media-icon-facebook/social-media-icon-facebook-9.jpg"
+                    alt="GitHub icon"
+                    width="50"
+                    class="mx-auto hover:scale-125 ease-in duration-200"
+                />
+            </a>
+        </div>
+
         <form @submit.prevent="submit">
             <div>
                 <InputLabel for="email" value="Email" />

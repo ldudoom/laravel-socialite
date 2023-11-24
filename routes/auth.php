@@ -10,6 +10,17 @@ use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
+
+use App\Http\Controllers\Auth\GithubAuthController;
+use App\Http\Controllers\Auth\FacebookAuthController;
+
+
+Route::get('/github-auth/redirect', [GithubAuthController::class, 'redirect']);
+Route::get('/github-auth/callback', [GithubAuthController::class, 'callback']);
+
+Route::get('/facebook-auth/redirect', [FacebookAuthController::class, 'redirect']);
+Route::get('/facebook-auth/callback', [FacebookAuthController::class, 'callback']);
 
 Route::middleware('guest')->group(function () {
     Route::get('register', [RegisteredUserController::class, 'create'])
